@@ -1,8 +1,9 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: Low-Light Image Enhancement with a Variational Retinex Model
+description: Perosnal implementation of X. Fu, D. Zeng, Y. Huang, X.-P. Zhang, and X. Ding, “A weighted variational model for simultaneous reflectance and illumination estimation,” in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2016, pp. 2782–2790.
+
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+url: https://LoucOoc.github.io
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  Template Repository: https://github.com/LoucOoc/Retinex_variational_model
