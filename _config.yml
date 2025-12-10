@@ -7,3 +7,13 @@ url: https://LoucOoc.github.io
 
 aux_links:
   Template Repository: https://github.com/LoucOoc/Retinex_variational_model
+aux_links_new_tab: true
+
+nav_enabled: true
+
+heading_anchors: true
+
+color_scheme: dark   # "light" 或 "dark"
+
+mermaid:
+  version: "9.1.3"
