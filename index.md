@@ -34,16 +34,58 @@ However, the objective function (2) is not convex giving the multiplication insi
 
 To clarify a Q&A question during my presentation, the minimization problem with objective (3) does have a global minimum and it is a convex problem since we can consider r ^ (k-1) and l ^ (k-1) as constants. Moreover, the original problem with objective function (2) is not convex and is hard to tell whether a global minimum exists.
 
-TO SOLVE this objective function, Fu et al. proposes to use ADMM, and the augmented Lagrangian (the dual problem) is constructed as the following:
+----------------------------------
+
+TO SOLVE this objective function, Fu et al. proposes to use ADMM due to the non-smoothness of the L1 norm, and the augmented Lagrangian (the dual problem) is constructed as the following:
 
 ![Lagrangian](./imgs/lagrangian.png)
 
-According to ADMM theory, solving this Lagrangian is equivalent to solving the original objective function.
+According to alternating direction method of multipliers (ADMM) theory, solving this Lagrangian is equivalent to solving the original objective function.
+
+And this DUAL problem can be separated, in ADMM style, into three iterative subproblems - each built upon the previous and all three subproblems have close form global minimum.
+
+Note: b is scaled dual / Bregman variable 
+
+![subproblem]: (./imgs/subproblem.png)
 
 
-----
+P1:
+
+If we take A = R ^ (k-1) dot (divergence) r ^ (k-1) dot + b ^ (k-1). This A is constant from previous iteration.
+
+We can separete P1 to further set of subproblems: min |d1| + lamda(A - d) ^ 2
+
+This problem can be solved by: 
+
+![p1]: (./imgs/P.png)
+
+
+P2:
+
+Given P2 is least-square problem, r ^ k can be solved by setting first derivative to zero. Xu et al. propose the use of fast fourier transformation (FFT) to accerate the process.
+
+![p2]: (./imgs/p2.png)
+
+Note: the constraint r ^ k <= 0 is accomplished by r ^ k = min(r & k, 0)
+
+P3:
+
+P3 is simular to P2 both in problem form and solving method:
+
+![p3]: (./imgs/p3.png)
+
+Note: the constraint l ^ k >= s is accomplished by l ^ k = max(l ^ k, s)
+
+---------------------
+Implementation:
+
+
 
 [Retinex_formula]: ./imgs/Retinex_formular.png
 [Model]: ./imgs/model.png
 [Lagrangian]: ./imgs/lagrangian.png
 [2]: ./imgs/2.png
+[subproblem]: ./imgs/subproblem.png
+[p1]: ./imgs/P.png
+[p2]: ./imgs/p2.png
+[p3]: ./imgs/p3.png
