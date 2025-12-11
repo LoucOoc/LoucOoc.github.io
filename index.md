@@ -9,14 +9,23 @@ layout: home
 
 
 The Approach:
-[Retinex_formular]
+
+![Retinex_formula](./imgs/Retinex_formular.png)
+
 According to Retinex assumption, the image can be seperated into reflectance and illumination. The core insight of the weighted variational Retinex model is to estimate reflectance and illumination from the source image, gamma correct the derived illumination, and conduct dot product of the corrected illumination with the reflectance to enhance image lighting/illumination.
-[Model]
+
+![Model](./imgs/model.png)
+
 The objective function have two assumption:
+
 1: Illumination is smooth (Simple Lighting condition).
+
 2: Reflectance changes sharply (Different objects tend to have discrete reflectance).
+
 Follwing these two assumption, the illumination term is penalized by L2 norm to enforce spatial smoothness, and the reflectance is penalized by L1 norm to enforce spatial smoothness.
+
 The fidelity term penalized the difference of the restored image and the origional image.
+
 All term are in log-domain so S=L⋅R in Retinex assumption can be transformed into s=l+r which, which allows the fidelity term to be convex for convenience to solve.
 
 
@@ -52,5 +61,5 @@ If you want to maintain your docs in the `docs` directory of an existing project
 [Jekyll]: https://jekyllrb.com
 [GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
 [use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
-[Retinex_formular]: ./imgs/Retinex_formular.png
+[Retinex_formula]: ./imgs/Retinex_formular.png
 [Model]: ./imgs/model.png
