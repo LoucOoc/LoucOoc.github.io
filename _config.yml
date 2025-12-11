@@ -1,4 +1,4 @@
-title: Low-Light Image Enhancement with a Variational Retinex Model
+title: Low-Light Image Enhancement with a Variational Retinex Model - 1.2
 description: Perosnal implementation of X. Fu, D. Zeng, Y. Huang, X.-P. Zhang, and X. Ding, “A weighted variational model for simultaneous reflectance and illumination estimation,” in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2016, pp. 2782–2790.
 
 theme: just-the-docs
