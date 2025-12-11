@@ -2,6 +2,13 @@
 title: Home
 layout: home
 ---
+{: .hightlight}
+> Motivation:  
+>Many images captured at night or in dim rooms are extremely dark
+>Important regions such as faces, hands, and objects become hard to detect
+
+
+
 
 This is a *bare-minimum* template to create a Jekyll site that uses the [Just the Docs] theme. You can easily set the created site to be published on [GitHub Pages] – the [README] file explains how to do that, along with other details.
 
