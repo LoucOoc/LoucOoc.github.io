@@ -233,6 +233,7 @@ Color Channels: The Green channel often converges differently than Red/Blue beca
 
 ---------------------
 
+More interesting examples can be found in my repository.
 
 
 
