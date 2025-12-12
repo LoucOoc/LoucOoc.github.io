@@ -2,6 +2,8 @@
 title: Home
 layout: home
 ---
+By Haoyu Wang, hwang2376@wisc.edu
+
 {: .hightlight}
 >Motivation:  
 >Many images captured at night or in dim indoor environments are extremely dark. Important regions such as faces, hands, roads, and objects become very difficult to see, which hurts both human perception and downstream vision algorithms. Low-light images suffer from low visibility, low contrast, and noise. Simple methods like Gamma Correction or Histogram Equalization often fail to preserve edges or amplify noise globally. To address this, I build on the Retinex assumption that an observed image can be decomposed into reflectance (intrinsic scene structure) and illumination (lighting). In particular, I adopt the weighted variational Retinex model proposed by Fu et al., which is designed to better preserve fine details while correcting low-light illumination.
@@ -231,7 +233,6 @@ Color Channels: The Green channel often converges differently than Red/Blue beca
 
 ---------------------
 
-Discussion:
 
 
 
